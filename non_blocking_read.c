@@ -25,8 +25,14 @@ int main(int argc, char argv) {
         /* If there is input waiting then we read stdin  */
         if(FD_ISSET(STDIN_FILENO,&read_fds)) {
             rlen = read(STDIN_FILENO, buf, 1024);
-            buf[rlen] = 0;
-            printf("%s", buf);
+            if(rlen > -1)
+            {
+                buf[rlen] = 0;
+                printf("%s", buf);
+            }
+            else {
+                perror("Error reading input.");
+            }
         }
     }
 }
