@@ -1,4 +1,4 @@
-# non_blocking_read
+# non_blocking_read for linux
 To compile you have to install gcc.
 
 
