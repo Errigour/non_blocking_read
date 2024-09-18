@@ -1,4 +1,4 @@
-/* A simple program to receive imput from users only when
+/* A simple program to receive input from users only when
 they entered input otherwise continue with the loop. */
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +14,7 @@ int main(int argc, char argv) {
     tv.tv_usec = 0;
     /* Uncomment setvbuf(stdout, NULL, _IONBF, 0); if you dont want 
     output to be buffered. There are instances when you wonder why 
-    printf is printing and it is because it is buffered. */
+    printf isn't printing and it is because it is buffered. */
     //setvbuf(stdout, NULL, _IONBF, 0);
     while(*buf!='q') {
         FD_ZERO(&read_fds);
